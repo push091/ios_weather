@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="cloud" id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-z1-yH1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5zw-bA-278"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="P3M-bl-AzR">
+                                <rect key="frame" x="8" y="430" width="398" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-H0-vsY">
+                                <rect key="frame" x="106.5" y="474" width="201.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature °F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIV-pd-Dco">
+                                <rect key="frame" x="108" y="518" width="198" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ti0-xN-04T">
+                                <rect key="frame" x="175" y="358" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="T7g-zA-iAj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HIV-pd-Dco" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Fg-a7-2dQ"/>
+                            <constraint firstItem="P3M-bl-AzR" firstAttribute="top" secondItem="Ti0-xN-04T" secondAttribute="bottom" constant="42" id="6Ca-ui-JVw"/>
+                            <constraint firstItem="HIV-pd-Dco" firstAttribute="top" secondItem="cJ3-H0-vsY" secondAttribute="bottom" constant="8" id="8tm-6n-7mO"/>
+                            <constraint firstItem="DDN-z1-yH1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ATR-er-ek2"/>
+                            <constraint firstItem="cJ3-H0-vsY" firstAttribute="top" secondItem="P3M-bl-AzR" secondAttribute="bottom" constant="8" id="CFY-MP-TkP"/>
+                            <constraint firstItem="Ti0-xN-04T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="175" id="DEa-MV-oLp"/>
+                            <constraint firstItem="Ti0-xN-04T" firstAttribute="centerX" secondItem="DDN-z1-yH1" secondAttribute="centerX" id="E8n-Xp-Ybg"/>
+                            <constraint firstItem="cJ3-H0-vsY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fiv-g1-jU5"/>
+                            <constraint firstItem="DDN-z1-yH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jpf-sL-9fV"/>
+                            <constraint firstItem="Ti0-xN-04T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NmA-Vh-lzM"/>
+                            <constraint firstItem="P3M-bl-AzR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S8I-7O-k4I"/>
+                            <constraint firstItem="cJ3-H0-vsY" firstAttribute="top" secondItem="P3M-bl-AzR" secondAttribute="bottom" constant="8" id="sCx-Yx-wq2"/>
+                            <constraint firstItem="Ti0-xN-04T" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="324" id="vLa-LD-oO5"/>
+                            <constraint firstItem="P3M-bl-AzR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="wej-B4-IUD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="Ti0-xN-04T" id="KcB-Fe-awT"/>
+                        <outlet property="locationLabel" destination="P3M-bl-AzR" id="pyd-rp-d9d"/>
+                        <outlet property="searchBar" destination="DDN-z1-yH1" id="OQz-GB-4a9"/>
+                        <outlet property="temperatureLabel" destination="cJ3-H0-vsY" id="v5D-Te-0Rc"/>
+                        <outlet property="temperatureLableF" destination="HIV-pd-Dco" id="gkP-FH-wfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462.3188405797102" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
